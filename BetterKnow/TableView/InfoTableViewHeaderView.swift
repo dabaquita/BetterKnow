@@ -22,9 +22,6 @@ class InfoTableViewHeaderView: UITableViewHeaderFooterView {
         super.init(reuseIdentifier: reuseIdentifier)
         contentView.backgroundColor = .systemBackground
         contentView.addSubview(title)
-        
-        // Constraints
-        
     }
     
     required init?(coder: NSCoder) {

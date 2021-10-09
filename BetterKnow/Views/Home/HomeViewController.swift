@@ -79,6 +79,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return view.bounds.height / 5
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        // Present new content here
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
             withIdentifier: InfoCell.identifier,
@@ -87,6 +93,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             print("ATTENTION - Could not load Info Cell")
             return UITableViewCell()
         }
+        
+        // For all cells
+        cell.accessoryType = .disclosureIndicator
         
         // Configure featured section cells
         if indexPath.section == 1 {
