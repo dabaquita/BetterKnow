@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07103ECC27121AE9009E9513 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07103ECB27121AE9009E9513 /* Categories.swift */; };
+		07103ECE27121AFC009E9513 /* Topics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07103ECD27121AFC009E9513 /* Topics.swift */; };
 		0717E3BC2711D0720096EED7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717E3BB2711D0720096EED7 /* AppDelegate.swift */; };
 		0717E3BE2711D0720096EED7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717E3BD2711D0720096EED7 /* SceneDelegate.swift */; };
 		0717E3C02711D0720096EED7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717E3BF2711D0720096EED7 /* HomeViewController.swift */; };
@@ -16,13 +18,15 @@
 		0717E3D52711D16D0096EED7 /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717E3D42711D16D0096EED7 /* LearnViewController.swift */; };
 		0717E3D72711D1CE0096EED7 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717E3D62711D1CE0096EED7 /* InfoCell.swift */; };
 		0717E3DC2711D5E10096EED7 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717E3DB2711D5E10096EED7 /* Colors.swift */; };
-		0717E3E12711FCFD0096EED7 /* InfoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717E3E02711FCFD0096EED7 /* InfoTableView.swift */; };
 		0717E3E52711FDE40096EED7 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717E3E42711FDE40096EED7 /* CategoryViewController.swift */; };
 		0717E3E72711FE360096EED7 /* TopicSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717E3E62711FE360096EED7 /* TopicSheetViewController.swift */; };
 		0717E3E9271215530096EED7 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717E3E8271215530096EED7 /* QuizViewController.swift */; };
+		0717E3EB2712188A0096EED7 /* FeaturedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717E3EA2712188A0096EED7 /* FeaturedCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07103ECB27121AE9009E9513 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		07103ECD27121AFC009E9513 /* Topics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topics.swift; sourceTree = "<group>"; };
 		0717E3B82711D0720096EED7 /* BetterKnow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterKnow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0717E3BB2711D0720096EED7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0717E3BD2711D0720096EED7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,10 +38,10 @@
 		0717E3D42711D16D0096EED7 /* LearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
 		0717E3D62711D1CE0096EED7 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
 		0717E3DB2711D5E10096EED7 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		0717E3E02711FCFD0096EED7 /* InfoTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableView.swift; sourceTree = "<group>"; };
 		0717E3E42711FDE40096EED7 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		0717E3E62711FE360096EED7 /* TopicSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicSheetViewController.swift; sourceTree = "<group>"; };
 		0717E3E8271215530096EED7 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		0717E3EA2712188A0096EED7 /* FeaturedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07103ECA27121ACA009E9513 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				07103ECB27121AE9009E9513 /* Categories.swift */,
+				07103ECD27121AFC009E9513 /* Topics.swift */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
 		0717E3AF2711D0720096EED7 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +83,8 @@
 		0717E3BA2711D0720096EED7 /* BetterKnow */ = {
 			isa = PBXGroup;
 			children = (
+				07103ECA27121ACA009E9513 /* DataModels */,
+				0717E3EC2712189D0096EED7 /* CollectionView */,
 				0717E3DA2711D5CF0096EED7 /* Constants */,
 				0717E3D32711D1480096EED7 /* TableView */,
 				0717E3D22711D1380096EED7 /* Views */,
@@ -95,7 +110,7 @@
 		0717E3D32711D1480096EED7 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				0717E3DF2711DB690096EED7 /* Info */,
+				0717E3D62711D1CE0096EED7 /* InfoCell.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -127,13 +142,12 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		0717E3DF2711DB690096EED7 /* Info */ = {
+		0717E3EC2712189D0096EED7 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				0717E3D62711D1CE0096EED7 /* InfoCell.swift */,
-				0717E3E02711FCFD0096EED7 /* InfoTableView.swift */,
+				0717E3EA2712188A0096EED7 /* FeaturedCollectionViewCell.swift */,
 			);
-			path = Info;
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,9 +224,11 @@
 				0717E3C02711D0720096EED7 /* HomeViewController.swift in Sources */,
 				0717E3DC2711D5E10096EED7 /* Colors.swift in Sources */,
 				0717E3E72711FE360096EED7 /* TopicSheetViewController.swift in Sources */,
+				07103ECC27121AE9009E9513 /* Categories.swift in Sources */,
 				0717E3BC2711D0720096EED7 /* AppDelegate.swift in Sources */,
-				0717E3E12711FCFD0096EED7 /* InfoTableView.swift in Sources */,
 				0717E3E9271215530096EED7 /* QuizViewController.swift in Sources */,
+				07103ECE27121AFC009E9513 /* Topics.swift in Sources */,
+				0717E3EB2712188A0096EED7 /* FeaturedCollectionViewCell.swift in Sources */,
 				0717E3BE2711D0720096EED7 /* SceneDelegate.swift in Sources */,
 				0717E3E52711FDE40096EED7 /* CategoryViewController.swift in Sources */,
 				0717E3D72711D1CE0096EED7 /* InfoCell.swift in Sources */,
