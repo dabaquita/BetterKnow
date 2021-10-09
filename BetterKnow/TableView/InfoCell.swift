@@ -8,6 +8,8 @@
 import UIKit
 
 class InfoCell: UITableViewCell {
+    
+    static let identifier = "InfoCell"
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
