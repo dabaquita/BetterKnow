@@ -17,6 +17,9 @@
 		0717E3D72711D1CE0096EED7 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717E3D62711D1CE0096EED7 /* InfoCell.swift */; };
 		0717E3DC2711D5E10096EED7 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717E3DB2711D5E10096EED7 /* Colors.swift */; };
 		0717E3E12711FCFD0096EED7 /* InfoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717E3E02711FCFD0096EED7 /* InfoTableView.swift */; };
+		0717E3E52711FDE40096EED7 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717E3E42711FDE40096EED7 /* CategoryViewController.swift */; };
+		0717E3E72711FE360096EED7 /* TopicSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717E3E62711FE360096EED7 /* TopicSheetViewController.swift */; };
+		0717E3E9271215530096EED7 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717E3E8271215530096EED7 /* QuizViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		0717E3D62711D1CE0096EED7 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
 		0717E3DB2711D5E10096EED7 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		0717E3E02711FCFD0096EED7 /* InfoTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableView.swift; sourceTree = "<group>"; };
+		0717E3E42711FDE40096EED7 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		0717E3E62711FE360096EED7 /* TopicSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicSheetViewController.swift; sourceTree = "<group>"; };
+		0717E3E8271215530096EED7 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +72,7 @@
 			children = (
 				0717E3DA2711D5CF0096EED7 /* Constants */,
 				0717E3D32711D1480096EED7 /* TableView */,
-				0717E3D22711D1380096EED7 /* ViewControllers */,
+				0717E3D22711D1380096EED7 /* Views */,
 				0717E3BB2711D0720096EED7 /* AppDelegate.swift */,
 				0717E3BD2711D0720096EED7 /* SceneDelegate.swift */,
 				0717E3C72711D0760096EED7 /* Assets.xcassets */,
@@ -77,13 +83,13 @@
 			path = BetterKnow;
 			sourceTree = "<group>";
 		};
-		0717E3D22711D1380096EED7 /* ViewControllers */ = {
+		0717E3D22711D1380096EED7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				0717E3D92711D1DF0096EED7 /* Home */,
 				0717E3D82711D1D50096EED7 /* Learn */,
 			);
-			path = ViewControllers;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		0717E3D32711D1480096EED7 /* TableView */ = {
@@ -98,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				0717E3D42711D16D0096EED7 /* LearnViewController.swift */,
+				0717E3E8271215530096EED7 /* QuizViewController.swift */,
 			);
 			path = Learn;
 			sourceTree = "<group>";
@@ -106,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				0717E3BF2711D0720096EED7 /* HomeViewController.swift */,
+				0717E3E42711FDE40096EED7 /* CategoryViewController.swift */,
+				0717E3E62711FE360096EED7 /* TopicSheetViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -200,9 +209,12 @@
 				0717E3D52711D16D0096EED7 /* LearnViewController.swift in Sources */,
 				0717E3C02711D0720096EED7 /* HomeViewController.swift in Sources */,
 				0717E3DC2711D5E10096EED7 /* Colors.swift in Sources */,
+				0717E3E72711FE360096EED7 /* TopicSheetViewController.swift in Sources */,
 				0717E3BC2711D0720096EED7 /* AppDelegate.swift in Sources */,
 				0717E3E12711FCFD0096EED7 /* InfoTableView.swift in Sources */,
+				0717E3E9271215530096EED7 /* QuizViewController.swift in Sources */,
 				0717E3BE2711D0720096EED7 /* SceneDelegate.swift in Sources */,
+				0717E3E52711FDE40096EED7 /* CategoryViewController.swift in Sources */,
 				0717E3D72711D1CE0096EED7 /* InfoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
