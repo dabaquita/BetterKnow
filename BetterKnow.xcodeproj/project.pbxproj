@@ -16,7 +16,7 @@
 		0717E3D52711D16D0096EED7 /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717E3D42711D16D0096EED7 /* LearnViewController.swift */; };
 		0717E3D72711D1CE0096EED7 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717E3D62711D1CE0096EED7 /* InfoCell.swift */; };
 		0717E3DC2711D5E10096EED7 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717E3DB2711D5E10096EED7 /* Colors.swift */; };
-		0717E3DE2711DB5D0096EED7 /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717E3DD2711DB5D0096EED7 /* InfoTableViewController.swift */; };
+		0717E3E12711FCFD0096EED7 /* InfoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717E3E02711FCFD0096EED7 /* InfoTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		0717E3D42711D16D0096EED7 /* LearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
 		0717E3D62711D1CE0096EED7 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
 		0717E3DB2711D5E10096EED7 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		0717E3DD2711DB5D0096EED7 /* InfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
+		0717E3E02711FCFD0096EED7 /* InfoTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				0717E3DA2711D5CF0096EED7 /* Constants */,
-				0717E3D32711D1480096EED7 /* TableViewControllers */,
+				0717E3D32711D1480096EED7 /* TableView */,
 				0717E3D22711D1380096EED7 /* ViewControllers */,
 				0717E3BB2711D0720096EED7 /* AppDelegate.swift */,
 				0717E3BD2711D0720096EED7 /* SceneDelegate.swift */,
@@ -86,12 +86,12 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		0717E3D32711D1480096EED7 /* TableViewControllers */ = {
+		0717E3D32711D1480096EED7 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
 				0717E3DF2711DB690096EED7 /* Info */,
 			);
-			path = TableViewControllers;
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		0717E3D82711D1D50096EED7 /* Learn */ = {
@@ -122,7 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				0717E3D62711D1CE0096EED7 /* InfoCell.swift */,
-				0717E3DD2711DB5D0096EED7 /* InfoTableViewController.swift */,
+				0717E3E02711FCFD0096EED7 /* InfoTableView.swift */,
 			);
 			path = Info;
 			sourceTree = "<group>";
@@ -199,9 +199,9 @@
 				0717E3C62711D0720096EED7 /* BetterKnow.xcdatamodeld in Sources */,
 				0717E3D52711D16D0096EED7 /* LearnViewController.swift in Sources */,
 				0717E3C02711D0720096EED7 /* HomeViewController.swift in Sources */,
-				0717E3DE2711DB5D0096EED7 /* InfoTableViewController.swift in Sources */,
 				0717E3DC2711D5E10096EED7 /* Colors.swift in Sources */,
 				0717E3BC2711D0720096EED7 /* AppDelegate.swift in Sources */,
+				0717E3E12711FCFD0096EED7 /* InfoTableView.swift in Sources */,
 				0717E3BE2711D0720096EED7 /* SceneDelegate.swift in Sources */,
 				0717E3D72711D1CE0096EED7 /* InfoCell.swift in Sources */,
 			);
