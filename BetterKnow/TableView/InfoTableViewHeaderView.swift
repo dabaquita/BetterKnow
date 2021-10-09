@@ -35,7 +35,7 @@ class InfoTableViewHeaderView: UITableViewHeaderFooterView {
         super.layoutSubviews()
         title.sizeToFit()
         title.frame = CGRect(
-            x: title.frame.size.width / 4,
+            x: contentView.frame.origin.x + 20,
             y: contentView.frame.size.height - title.frame.size.height - 20,
             width: contentView.frame.size.width,
             height: title.frame.size.height
