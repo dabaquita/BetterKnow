@@ -44,7 +44,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        // Categories section
+        if section == 1 {
+            return 4
+        }
+        // Feature section
+        else {
+            return 2
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -59,8 +66,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewHeaderFooterView()
         }
         if section == 1 {
+            header.contentView.backgroundColor = Colors.navy
             header.title.text = "Categories"
         } else {
+            header.contentView.backgroundColor = Colors.orange
             header.title.text = "Featured"
         }
         return header
@@ -77,6 +86,15 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         ) as? InfoCell else {
             print("ATTENTION - Could not load Info Cell")
             return UITableViewCell()
+        }
+        
+        // Configure featured section cells
+        if indexPath.section == 1 {
+            cell.backgroundColor = Colors.blue
+        }
+        // Configure categories section cells
+        else {
+            cell.backgroundColor = Colors.lightOrange
         }
         
         // Configure cell properties here
