@@ -12,7 +12,6 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     let mainVerticalScrollView = UIScrollView()
     let categoryTableView = UITableView()
     
-    
     private let tableView: UITableView = {
         let table = UITableView()
         table.register(UITableViewCell.self,
@@ -30,7 +29,6 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +38,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.delegate = self
         tableView.dataSource = self
         view.backgroundColor = .systemBackground
+        navigationController?.navigationBar.isHidden = false
         
         configureTableView()
         

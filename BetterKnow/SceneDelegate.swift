@@ -18,6 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // Creating View Hierarchy
         let tabBarController = UITabBarController()
+        tabBarController.tabBar.barTintColor = Colors.peach
+        tabBarController.tabBar.isTranslucent = false
+        tabBarController.tabBar.unselectedItemTintColor = .white
         
         // HomeVC
         let homeVC = HomeViewController()

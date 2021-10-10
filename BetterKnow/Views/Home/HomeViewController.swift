@@ -21,10 +21,15 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
-        navigationItem.title = "BetterKnow"
+        view.backgroundColor = Colors.offWhite2
+        navigationController?.navigationBar.isHidden = true
         
         configureTableView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
     }
     
     private func configureTableView() {
@@ -32,6 +37,7 @@ class HomeViewController: UIViewController {
         categoryTableView.dataSource = self
         categoryTableView.register(InfoCell.self, forCellReuseIdentifier: InfoCell.identifier)
         categoryTableView.register(InfoTableViewHeaderView.self, forHeaderFooterViewReuseIdentifier: InfoTableViewHeaderView.identifier)
+        categoryTableView.backgroundColor = Colors.offWhite2
         view.addSubview(categoryTableView)
         
         // Constraints
@@ -72,11 +78,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             print("ATTENTION - Could not get InfoTableViewHeaderView")
             return UITableViewHeaderFooterView()
         }
+        header.contentView.backgroundColor = Colors.offWhite2
         if section == 1 {
-            header.contentView.backgroundColor = Colors.navy
             header.title.text = "Categories"
         } else {
-            header.contentView.backgroundColor = Colors.orange
             header.title.text = "Featured"
         }
         return header
@@ -97,8 +102,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         // Configure Categories section cells
         if indexPath.section == 1 {
-            cell.backgroundColor = Colors.blue
-            cell.button.backgroundColor = Colors.navy
+            cell.backgroundColor = Colors.offWhite2
+            cell.button.backgroundColor = Colors.peach
             cell.buttonHandler = { [weak self] in
                 guard let self = self else { return }
                 let cvc = CategoryViewController(category: self.catData[indexPath.row])
@@ -108,8 +113,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         }
         // Configure Featured section cells
         else {
-            cell.backgroundColor = Colors.lightOrange
-            cell.button.backgroundColor = Colors.orange
+            cell.backgroundColor = Colors.offWhite2
+            cell.button.backgroundColor = Colors.peach
             cell.buttonHandler = { [weak self] in
                 guard let self = self else { return }
                 let topicVC = TopicSheetViewController(topics: self.featData[indexPath.row])
