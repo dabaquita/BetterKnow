@@ -16,8 +16,9 @@ class LearnViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = Colors.offWhite2
         navigationItem.title = "Learn"
+        navigationController?.navigationBar.isHidden = true
         
         configureTableView()
     }
@@ -27,6 +28,7 @@ class LearnViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(InfoCell.self, forCellReuseIdentifier: InfoCell.identifier)
         tableView.register(InfoTableViewHeaderView.self, forHeaderFooterViewReuseIdentifier: InfoTableViewHeaderView.identifier)
+        tableView.backgroundColor = Colors.offWhite2
         view.addSubview(tableView)
         
         // Constraints
@@ -68,11 +70,10 @@ extension LearnViewController: UITableViewDelegate, UITableViewDataSource {
             print("ATTENTION - Could not get InfoTableViewHeaderView")
             return UITableViewHeaderFooterView()
         }
+        header.contentView.backgroundColor = Colors.offWhite2
         if section == 1 {
-            header.contentView.backgroundColor = Colors.navy
             header.title.text = "Quizzes"
         } else {
-            header.contentView.backgroundColor = Colors.orange
             header.title.text = "Featured"
         }
         return header
@@ -93,8 +94,8 @@ extension LearnViewController: UITableViewDelegate, UITableViewDataSource {
         
         // Configure Quiz section cells
         if indexPath.section == 1 {
-            cell.backgroundColor = Colors.blue
-            cell.button.backgroundColor = Colors.navy
+            cell.backgroundColor = Colors.offWhite2
+            cell.button.backgroundColor = Colors.peach
             cell.button.setTitle("Quiz", for: .normal)
             cell.buttonHandler = {
                 print("Hello Quiz")
@@ -102,8 +103,8 @@ extension LearnViewController: UITableViewDelegate, UITableViewDataSource {
         }
         // Configure Featured section cells
         else {
-            cell.backgroundColor = Colors.lightOrange
-            cell.button.backgroundColor = Colors.orange
+            cell.backgroundColor = Colors.offWhite2
+            cell.button.backgroundColor = Colors.peach
             cell.button.setTitle("Featured", for: .normal)
             cell.buttonHandler = {
                 print("Hello Featured")

@@ -39,6 +39,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.dataSource = self
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.isHidden = false
+        navigationController?.navigationBar.barTintColor = Colors.peach
         
         configureTableView()
         
@@ -49,6 +50,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         categoryTableView.dataSource = self
         categoryTableView.register(InfoCell.self, forCellReuseIdentifier: InfoCell.identifier)
         categoryTableView.register(InfoTableViewHeaderView.self, forHeaderFooterViewReuseIdentifier: InfoTableViewHeaderView.identifier)
+        tableView.backgroundColor = Colors.offWhite2
         view.addSubview(categoryTableView)
         
         // Constraints
@@ -87,8 +89,8 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         }
         
         // Configure Categories section cells
-        cell.backgroundColor = Colors.blue
-        cell.button.backgroundColor = Colors.navy
+        cell.backgroundColor = Colors.offWhite2
+        cell.button.backgroundColor = Colors.peach
         cell.button.setTitle(category.topics[indexPath.row].title, for: .normal)
         cell.buttonHandler = { [weak self] in
             guard let self = self else { return }

@@ -29,7 +29,7 @@ class TopicSheetViewController: UIViewController {
         super.viewDidLoad()
         modalPresentationStyle = .pageSheet
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named:"BetterKnowTopicSheetBG.svg"))
-        view.backgroundColor = .systemTeal
+        view.backgroundColor = Colors.offWhite2
         
         configureScrollView()
     }
@@ -62,8 +62,9 @@ class TopicSheetViewController: UIViewController {
         titleLabel.numberOfLines = 0
         titleLabel.font = .systemFont(ofSize: 30)
         titleLabel.text = topics.title
-        titleLabel.font = UIFont(name: "HelveticaNeue-Thin", size: 40)
+        titleLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 40)
         titleLabel.sizeToFit()
+        titleLabel.textColor = Colors.peach
         contentView.addSubview(titleLabel)
         
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -78,8 +79,9 @@ class TopicSheetViewController: UIViewController {
         descLabel.numberOfLines = 0
         descLabel.font = .systemFont(ofSize: 15)
         descLabel.text = topics.description
-        descLabel.font = UIFont(name: "HelveticaNeue-Thin", size: 20)
+        descLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 20)
         descLabel.sizeToFit()
+        descLabel.textColor = Colors.peach
         contentView.addSubview(descLabel)
         
         descLabel.translatesAutoresizingMaskIntoConstraints = false
