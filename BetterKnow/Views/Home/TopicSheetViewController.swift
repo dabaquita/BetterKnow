@@ -9,17 +9,16 @@ import UIKit
 
 class TopicSheetViewController: UIViewController {
 
-    
     var titleLabel = UILabel()
     var descLabel = UILabel()
-    var stackView = UIStackView()
+    var contentView = UIView()
+    var scrollView = UIScrollView()
     
     private let topics: Topic
     
     init(topics: Topic) {
         self.topics = topics
         super.init(nibName: nil, bundle: nil)
-
     }
     
     required init?(coder: NSCoder) {
@@ -28,34 +27,35 @@ class TopicSheetViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        modalPresentationStyle = .formSheet
+        modalPresentationStyle = .pageSheet
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named:"BetterKnowTopicSheetBG.svg"))
         view.backgroundColor = .systemTeal
         
-        configureStackView()
-
-        
+        configureScrollView()
     }
     
-    func configureStackView() {
-        stackView.axis = .vertical
-        stackView.alignment = .top
-        stackView.distribution = .equalCentering
-        view.addSubview(stackView)
+    func configureScrollView() {
+        view.addSubview(scrollView)
+        scrollView.addSubview(contentView)
     
-        stackView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-            stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20)
+            scrollView.topAnchor.constraint(equalTo: view.topAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+        
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            contentView.topAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.topAnchor),
+            contentView.leadingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.leadingAnchor),
+            contentView.trailingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.trailingAnchor),
+            contentView.bottomAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.bottomAnchor)
+        ])
+        
         configureTitleLabel()
         configureDescriptionLabel()
-        stackView.addArrangedSubview(titleLabel)
-        stackView.addArrangedSubview(descLabel)
-       
-        
     }
     
     func configureTitleLabel() {
@@ -63,7 +63,15 @@ class TopicSheetViewController: UIViewController {
         titleLabel.font = .systemFont(ofSize: 30)
         titleLabel.text = topics.title
         titleLabel.font = UIFont(name: "HelveticaNeue-Thin", size: 40)
+        titleLabel.sizeToFit()
+        contentView.addSubview(titleLabel)
         
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
+            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+        ])
     }
     
     func configureDescriptionLabel() {
@@ -71,23 +79,15 @@ class TopicSheetViewController: UIViewController {
         descLabel.font = .systemFont(ofSize: 15)
         descLabel.text = topics.description
         descLabel.font = UIFont(name: "HelveticaNeue-Thin", size: 20)
-
-
+        descLabel.sizeToFit()
+        contentView.addSubview(descLabel)
+        
+        descLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            descLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
+            descLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            descLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            descLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20)
+        ])
     }
-    
-
-
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

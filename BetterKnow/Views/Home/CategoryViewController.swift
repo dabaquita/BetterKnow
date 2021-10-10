@@ -93,9 +93,8 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         cell.button.setTitle(category.topics[indexPath.row].title, for: .normal)
         cell.buttonHandler = { [weak self] in
             guard let self = self else { return }
-            let newVC = TopicSheetViewController(topics: self.category.topics[indexPath.row]
-            )
-            self.navigationController?.pushViewController(newVC, animated: true)
+            let newVC = TopicSheetViewController(topics: self.category.topics[indexPath.row])
+            self.present(newVC, animated: true)
         }
         
         return cell
