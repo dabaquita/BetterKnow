@@ -11,11 +11,19 @@ class HomeViewController: UIViewController {
     
     let mainVerticalScrollView = UIScrollView()
     let categoryTableView = UITableView()
+    
+    let catData: [Category] = [
+    Category(title: "General Information", image: UIImage(systemName: "book")!, topics: [Topic(title: "Eat", description: "My ass")]),
+    Category(title: "Finding Help", image: UIImage(systemName: "book.fill")!, topics: [Topic(title: "Eat", description: "My dick")]),
+    Category(title: "Support", image: UIImage(systemName: "book.closed")!, topics: [Topic(title: "Eat", description: "My taco")]),
+    Category(title: "Understanding systems and treatments", image: UIImage(systemName: "pills")!, topics: [Topic(title: "Eat", description: "My pills")])
+    ]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        navigationItem.title = "Home"
+        navigationItem.title = "BetterKnow"
         
         configureTableView()
     }
@@ -97,11 +105,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         // For all cells
         cell.accessoryType = .disclosureIndicator
         
-        // Configure featured section cells
+        // Configure Categories section cells
         if indexPath.section == 1 {
             cell.backgroundColor = Colors.blue
+            cell.textLabel?.text = catData[indexPath.row].title
         }
-        // Configure categories section cells
+        // Configure Featured section cells
         else {
             cell.backgroundColor = Colors.lightOrange
         }

@@ -12,7 +12,7 @@ class LearnViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        navigationItem.title = "Learn"
+        navigationItem.title = "BetterKnow"
     }
     
 }
