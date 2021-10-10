@@ -16,10 +16,10 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         return table
     }()
     
-    private let items: [String]
+    private let category: Category
     
-    init(items: [String]) {
-        self.items = items
+    init(category: Category) {
+        self.category = category
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -38,7 +38,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -49,7 +49,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        print(items[indexPath.row])
+        let newVC = TopicSheetViewController(topics: category.topics[indexPath.row])
     }
 
     /*

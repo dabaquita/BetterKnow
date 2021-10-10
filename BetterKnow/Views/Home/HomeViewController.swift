@@ -96,9 +96,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         
         // Present new content here
-        let category = catData[indexPath.row]
-        let cvc = CategoryViewController(items: category.items)
-        cvc.title = category.title
+        let cvc = CategoryViewController(category: catData[indexPath.row])
+    
         navigationController?.pushViewController(cvc, animated: true)
         
     }
