@@ -13,8 +13,8 @@ class HomeViewController: UIViewController {
     let categoryTableView = UITableView()
     
     public let catData: [Category] = [
-    Category(title: "General Information", image: UIImage(systemName: "book")!, topics: [Topic(title: "Eat", description: "My ass")]),
-    Category(title: "Finding Help", image: UIImage(systemName: "book.fill")!, topics: [Topic(title: "Eat", description: "My dick")]),
+    Category(title: "General Information", image: UIImage(systemName: "book")!, topics: [Topic(title: "Eat", description: "My horse")]),
+    Category(title: "Finding Help", image: UIImage(systemName: "book.fill")!, topics: [Topic(title: "Eat", description: "My hamburger")]),
     Category(title: "Support", image: UIImage(systemName: "book.closed")!, topics: [Topic(title: "Eat", description: "My taco")]),
     Category(title: "Understanding systems and treatments", image: UIImage(systemName: "pills")!, topics: [Topic(title: "Eat", description: "My pills")])
     ]
