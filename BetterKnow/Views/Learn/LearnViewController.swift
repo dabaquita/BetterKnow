@@ -79,15 +79,7 @@ extension LearnViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return view.bounds.height / 5
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        // Present new content here
-        let quizVC = QuizViewController()
-        navigationController?.pushViewController(quizVC, animated: true)
+        return view.bounds.height / 7
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -99,18 +91,23 @@ extension LearnViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        // For all cells
-        cell.accessoryType = .disclosureIndicator
-        
-        // Configure Categories section cells
+        // Configure Featured section cells
         if indexPath.section == 1 {
             cell.backgroundColor = Colors.blue
-            //cell.textLabel?.text = catData[indexPath.row].title
+            cell.button.backgroundColor = Colors.navy
+            cell.button.setTitle("Featured", for: .normal)
+            cell.buttonHandler = {
+                print("Hello Featured")
+            }
         }
         // Configure Featured section cells
         else {
             cell.backgroundColor = Colors.lightOrange
-            //cell.textLabel?.text = featData[indexPath.row].title
+            cell.button.backgroundColor = Colors.orange
+            cell.button.setTitle("Quiz", for: .normal)
+            cell.buttonHandler = {
+                print("Hello Quiz")
+            }
         }
         
         return cell
