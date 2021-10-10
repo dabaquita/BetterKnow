@@ -10,6 +10,8 @@
 		07103ECC27121AE9009E9513 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07103ECB27121AE9009E9513 /* Category.swift */; };
 		07103ECE27121AFC009E9513 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07103ECD27121AFC009E9513 /* Topic.swift */; };
 		07103ED0271226DA009E9513 /* InfoTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07103ECF271226DA009E9513 /* InfoTableViewHeaderView.swift */; };
+		07103ED427129AE6009E9513 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07103ED327129AE6009E9513 /* Quiz.swift */; };
+		07103ED627129B94009E9513 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07103ED527129B94009E9513 /* Question.swift */; };
 		0717E3BC2711D0720096EED7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717E3BB2711D0720096EED7 /* AppDelegate.swift */; };
 		0717E3BE2711D0720096EED7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717E3BD2711D0720096EED7 /* SceneDelegate.swift */; };
 		0717E3C02711D0720096EED7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0717E3BF2711D0720096EED7 /* HomeViewController.swift */; };
@@ -29,6 +31,8 @@
 		07103ECB27121AE9009E9513 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		07103ECD27121AFC009E9513 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		07103ECF271226DA009E9513 /* InfoTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewHeaderView.swift; sourceTree = "<group>"; };
+		07103ED327129AE6009E9513 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		07103ED527129B94009E9513 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		0717E3B82711D0720096EED7 /* BetterKnow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterKnow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0717E3BB2711D0720096EED7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0717E3BD2711D0720096EED7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 			children = (
 				07103ECB27121AE9009E9513 /* Category.swift */,
 				07103ECD27121AFC009E9513 /* Topic.swift */,
+				07103ED327129AE6009E9513 /* Quiz.swift */,
+				07103ED527129B94009E9513 /* Question.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -223,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0717E3C62711D0720096EED7 /* BetterKnow.xcdatamodeld in Sources */,
+				07103ED627129B94009E9513 /* Question.swift in Sources */,
 				07103ED0271226DA009E9513 /* InfoTableViewHeaderView.swift in Sources */,
 				0717E3D52711D16D0096EED7 /* LearnViewController.swift in Sources */,
 				0717E3C02711D0720096EED7 /* HomeViewController.swift in Sources */,
@@ -233,6 +240,7 @@
 				0717E3E9271215530096EED7 /* QuizViewController.swift in Sources */,
 				07103ECE27121AFC009E9513 /* Topic.swift in Sources */,
 				0717E3EB2712188A0096EED7 /* FeaturedCollectionViewCell.swift in Sources */,
+				07103ED427129AE6009E9513 /* Quiz.swift in Sources */,
 				0717E3BE2711D0720096EED7 /* SceneDelegate.swift in Sources */,
 				0717E3E52711FDE40096EED7 /* CategoryViewController.swift in Sources */,
 				0717E3D72711D1CE0096EED7 /* InfoCell.swift in Sources */,
