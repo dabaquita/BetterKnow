@@ -39,7 +39,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
-        view.backgroundColor = .systemTeal
+        view.backgroundColor = .systemBackground
         
         configureTableView()
         
@@ -104,20 +104,11 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         cell.accessoryType = .disclosureIndicator
         
         // Configure Categories section cells
-        if indexPath.section == 1 {
-            cell.backgroundColor = Colors.blue
-        }
-        // Configure Featured section cells
-        else {
-            cell.backgroundColor = Colors.lightOrange
-            cell.textLabel?.text = category.topics[indexPath.row].title
-
-        }
-        
+        cell.backgroundColor = Colors.blue
+        cell.button.backgroundColor = Colors.navy
+        cell.button.setTitle(category.topics[indexPath.row].title, for: .normal)
         // Configure cell properties here
         cell.largeContentTitle = "HELLO WORLD"
-        cell.textLabel?.numberOfLines = 0
-
         
         return cell
     }
