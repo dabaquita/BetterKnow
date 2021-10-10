@@ -29,9 +29,8 @@ class TopicSheetViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         modalPresentationStyle = .formSheet
-        view.backgroundColor = .systemBackground
-        
-        
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named:"BetterKnowTopicSheetBG.svg"))
+        view.backgroundColor = .systemTeal
         
         configureStackView()
 
@@ -63,6 +62,7 @@ class TopicSheetViewController: UIViewController {
         titleLabel.numberOfLines = 0
         titleLabel.font = .systemFont(ofSize: 30)
         titleLabel.text = topics.title
+        titleLabel.font = UIFont(name: "HelveticaNeue-Thin", size: 40)
         
     }
     
@@ -70,6 +70,7 @@ class TopicSheetViewController: UIViewController {
         descLabel.numberOfLines = 0
         descLabel.font = .systemFont(ofSize: 15)
         descLabel.text = topics.description
+        descLabel.font = UIFont(name: "HelveticaNeue-Thin", size: 20)
 
 
     }

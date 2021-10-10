@@ -25,6 +25,7 @@ class InfoCell: UITableViewCell {
         button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 25, bottom: 0, right: 25);
         button.clipsToBounds = true
         button.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
+        button.titleLabel?.numberOfLines = 0
         button.startAnimatingPressActions()
         contentView.addSubview(button)
         
