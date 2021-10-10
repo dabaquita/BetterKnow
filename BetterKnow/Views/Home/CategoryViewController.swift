@@ -78,19 +78,6 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         return view.bounds.height / 5
     }
     
-    //func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    //    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-     //   return cell
-        
-    //}
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        let newVC = TopicSheetViewController(topics: category.topics[indexPath.row])
-        navigationController?.pushViewController(newVC, animated: true)
-
-    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
             withIdentifier: InfoCell.identifier,
@@ -107,20 +94,13 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         cell.backgroundColor = Colors.blue
         cell.button.backgroundColor = Colors.navy
         cell.button.setTitle(category.topics[indexPath.row].title, for: .normal)
-        // Configure cell properties here
-        cell.largeContentTitle = "HELLO WORLD"
+        cell.buttonHandler = { [weak self] in
+            guard let self = self else { return }
+            let newVC = TopicSheetViewController(topics: self.category.topics[indexPath.row]
+            )
+            self.navigationController?.pushViewController(newVC, animated: true)
+        }
         
         return cell
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
