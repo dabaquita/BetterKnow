@@ -22,7 +22,7 @@ class InfoCell: UITableViewCell {
         button.titleLabel?.font = .systemFont(ofSize: 23, weight: .semibold)
         button.layer.cornerRadius = 10
         button.contentHorizontalAlignment = .left
-        button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 25, bottom: 0, right: 0);
+        button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 25, bottom: 0, right: 25);
         button.clipsToBounds = true
         button.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
         button.startAnimatingPressActions()

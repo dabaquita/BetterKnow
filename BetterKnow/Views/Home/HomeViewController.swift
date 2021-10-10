@@ -83,15 +83,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return view.bounds.height / 5
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        // Present new content here
-        let cvc = CategoryViewController(category: catData[indexPath.row])
-        navigationController?.pushViewController(cvc, animated: true)
+        return view.bounds.height / 6
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -103,22 +95,28 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        // For all cells
-        cell.accessoryType = .disclosureIndicator
-        
         // Configure Categories section cells
         if indexPath.section == 1 {
             cell.backgroundColor = Colors.blue
-            cell.textLabel?.text = catData[indexPath.row].title
+            cell.button.backgroundColor = Colors.navy
+            cell.buttonHandler = { [weak self] in
+                guard let self = self else { return }
+                let cvc = CategoryViewController(category: self.catData[indexPath.row])
+                self.navigationController?.pushViewController(cvc, animated: true)
+            }
+            cell.button.setTitle(catData[indexPath.row].title, for: .normal)
         }
         // Configure Featured section cells
         else {
             cell.backgroundColor = Colors.lightOrange
-            cell.textLabel?.text = featData[indexPath.row].title
+            cell.button.backgroundColor = Colors.orange
+            cell.buttonHandler = { [weak self] in
+                guard let self = self else { return }
+                let cvc = CategoryViewController(category: self.featData[indexPath.row])
+                self.navigationController?.pushViewController(cvc, animated: true)
+            }
+            cell.button.setTitle(featData[indexPath.row].title, for: .normal)
         }
-        
-        // Configure cell properties here
-        cell.largeContentTitle = "HELLO WORLD"
         
         return cell
     }
