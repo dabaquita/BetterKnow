@@ -91,22 +91,22 @@ extension LearnViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        // Configure Featured section cells
+        // Configure Quiz section cells
         if indexPath.section == 1 {
             cell.backgroundColor = Colors.blue
             cell.button.backgroundColor = Colors.navy
-            cell.button.setTitle("Featured", for: .normal)
+            cell.button.setTitle("Quiz", for: .normal)
             cell.buttonHandler = {
-                print("Hello Featured")
+                print("Hello Quiz")
             }
         }
         // Configure Featured section cells
         else {
             cell.backgroundColor = Colors.lightOrange
             cell.button.backgroundColor = Colors.orange
-            cell.button.setTitle("Quiz", for: .normal)
+            cell.button.setTitle("Featured", for: .normal)
             cell.buttonHandler = {
-                print("Hello Quiz")
+                print("Hello Featured")
             }
         }
         

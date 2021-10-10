@@ -14,6 +14,7 @@ class InfoTableViewHeaderView: UITableViewHeaderFooterView {
     let title: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
+        label.textColor = .systemBackground
         label.font = .systemFont(ofSize: 40, weight: .semibold)
         return label
     }()
