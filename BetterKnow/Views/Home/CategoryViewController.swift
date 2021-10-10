@@ -87,9 +87,6 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
             return UITableViewCell()
         }
         
-        // For all cells
-        cell.accessoryType = .disclosureIndicator
-        
         // Configure Categories section cells
         cell.backgroundColor = Colors.blue
         cell.button.backgroundColor = Colors.navy
