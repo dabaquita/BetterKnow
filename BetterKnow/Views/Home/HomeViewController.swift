@@ -12,19 +12,13 @@ class HomeViewController: UIViewController {
     let mainVerticalScrollView = UIScrollView()
     let categoryTableView = UITableView()
     
-    public let catData: [Category] = [
-    Category(title: "General Information", image: UIImage(systemName: "book")!, topics: [Topic(title: "Eat", description: "My horse")]),
-    Category(title: "Finding Help", image: UIImage(systemName: "book.fill")!, topics: [Topic(title: "Eat", description: "My hamburger")]),
-    Category(title: "Support", image: UIImage(systemName: "book.closed")!, topics: [Topic(title: "Eat", description: "My taco")]),
-    Category(title: "Understanding systems and treatments", image: UIImage(systemName: "pills")!, topics: [Topic(title: "Eat", description: "My pills")])
-    ]
+    let catData: [Category] = Category.FetchCategories()
     
     public let featData: [Category] = [
     Category(title: "Love your mom", image: UIImage(systemName: "pills")!, topics: [Topic(title: "Love your Dad too", description: "Gotta love your parents baby")]),
     Category(title: "Love your brother", image: UIImage(systemName: "book")!, topics: [Topic(title: "Love your sister too", description: "Gotta love your siblings baby")])
     ]
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -97,9 +91,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         // Present new content here
         let cvc = CategoryViewController(category: catData[indexPath.row])
-    
         navigationController?.pushViewController(cvc, animated: true)
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
